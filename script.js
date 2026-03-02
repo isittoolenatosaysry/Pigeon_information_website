@@ -35,6 +35,14 @@ const facts = [
   { title: "Pigeons in World War I and II", category: "History", text: "During both World War I and World War II, pigeons were used extensively by military forces to carry critical messages across enemy lines. When radio communication failed or was intercepted, pigeons provided a reliable alternative. One famous pigeon, known as Cher Ami, delivered a message in 1918 that helped save nearly 200 soldiers despite being seriously injured. Thousands of military pigeons were deployed during wartime, proving their strategic importance in modern history." },
 ];
 
+/* -------- Random Fun Fact -------- */
+const randomFactEl = document.getElementById("randomFact");
+
+if (randomFactEl) {
+  const randomIndex = Math.floor(Math.random() * facts.length);
+  randomFactEl.textContent = facts[randomIndex].title;
+}
+
 const factList = $("#factList");
 const factSearch = $("#factSearch");
 const factFilter = $("#factFilter");
@@ -132,3 +140,4 @@ imgModal.addEventListener("click", (e) => {
     e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom;
   if (clickedOutside) closeModal();
 });
+
