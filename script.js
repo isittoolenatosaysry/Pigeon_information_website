@@ -74,12 +74,20 @@ function renderFacts(items) {
 
 function filterFacts() {
   const q = (factSearch.value || "").trim().toLowerCase();
-  const cat = factFilter.value;
+  const cat = factFilter.value.trim().toLowerCase();
+
+  console.log("Selected:", cat);
+console.log("Facts categories:", facts.map(f => f.category));
 
   const filtered = facts.filter((f) => {
-    const matchesCat = cat === "all" ? true : f.category === cat;
+    const matchesCat =
+      cat === "all"
+        ? true
+        : f.category.toLowerCase() === cat;
+
     const hay = `${f.title} ${f.text} ${f.category}`.toLowerCase();
     const matchesText = q.length === 0 ? true : hay.includes(q);
+
     return matchesCat && matchesText;
   });
 
