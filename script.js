@@ -140,4 +140,3 @@ imgModal.addEventListener("click", (e) => {
     e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom;
   if (clickedOutside) closeModal();
 });
-
