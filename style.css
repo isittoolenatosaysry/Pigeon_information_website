@@ -22,6 +22,10 @@ body {
   line-height: 1.55;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img { max-width: 100%; display: block; }
 
 .container {
@@ -63,8 +67,13 @@ img { max-width: 100%; display: block; }
 .logo {
   color: var(--text);
   text-decoration: none;
-  font-weight: 800;
-  letter-spacing: 0.2px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.logo:hover {
+  color: rgb(209, 213, 227);
 }
 
 .site-nav {
@@ -111,7 +120,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1.25rem;
 }
 
-h1, h2, h3 { line-height: 1.2; margin: 0; }
+h1, h2, h3 { line-height: 1.2; margin: 0; font-weight: 500; }
 p { margin: 0.35rem 0 0; color: var(--muted); }
 
 /* ====== Hero ====== */
@@ -231,9 +240,9 @@ select { max-width: 240px; }
 
 .tile {
   padding: 0;
-  border: 0;
   background: transparent;
   cursor: pointer;
+  border: 0;
 }
 
 .tile img {
